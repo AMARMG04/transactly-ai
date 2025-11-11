@@ -4,11 +4,16 @@ Step 8b — Streamlit Frontend for Transactly
 Provides an interactive demo for AI-based transaction categorization.
 """
 
+import os
 import streamlit as st
 import requests
 import pandas as pd
 
-API_URL = "http://127.0.0.1:8000/api/classify/"
+# API_URL = "http://127.0.0.1:8000/api/classify/"
+BACKEND_URL = os.getenv("BACKEND_URL", "http://127.0.0.1:8000")
+
+API_URL = f"{BACKEND_URL.rstrip('/')}/api/classify/"
+FEEDBACK_URL = f"{BACKEND_URL.rstrip('/')}/api/feedback/"
 
 st.set_page_config(
     page_title="Transactly — Explainable Transaction Intelligence",
