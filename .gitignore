@@ -1,0 +1,56 @@
+# ==========================
+# Transactly Git Ignore File
+# ==========================
+
+# --- Virtual Environment ---
+.venv/
+venv/
+env/
+ENV/
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# --- IDE & Editor Files ---
+.vscode/
+.idea/
+.DS_Store
+
+# --- OS generated files ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Python cache & logs ---
+*.log
+*.out
+*.err
+*.egg-info/
+*.egg
+.cache/
+.tox/
+.mypy_cache/
+.pytest_cache/
+coverage/
+htmlcov/
+build/
+dist/
+
+# --- Model and Embeddings ---
+#app/models/*.pkl
+data/processed/embeddings.npy
+data/processed/texts.npy
+
+# --- Raw & Synthetic Data ---
+data/raw/
+data/feedback.csv
+data/processed/transactions_retrained.csv
+
+# --- Local development artifacts ---
+notebooks/
+*.ipynb_checkpoints/
+*.swp
+
+# --- Streamlit / Render temp ---
+.streamlit/
