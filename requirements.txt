@@ -13,12 +13,11 @@ rapidfuzz
 unidecode
 
 # --- CPU-only PyTorch (small, fast, works on Railway) ---
-torch==2.2.2+cpu
-torchaudio==2.2.2+cpu
-torchvision==0.17.2+cpu
+torch==2.7.1+cpu
+torchaudio==2.7.1+cpu
+torchvision==0.22.1+cpu
 --extra-index-url https://download.pytorch.org/whl/cpu
 
-# --- Embeddings / NLP ---
 sentence-transformers==2.2.2
 
 # --- Utilities ---
