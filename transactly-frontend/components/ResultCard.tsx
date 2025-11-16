@@ -93,7 +93,6 @@ export default function ResultCard({ result, loading }: { result: Classification
       {/* Prediction Summary */}
       <section>
         <div className="flex items-center gap-2 mb-1">
-          <span className="text-xl">🧠</span>
           <h2 className="text-lg font-semibold">Prediction</h2>
         </div>
 
@@ -136,7 +135,6 @@ export default function ResultCard({ result, loading }: { result: Classification
       {/* Feedback */}
       <section>
         <div className="flex items-center gap-2 mb-1">
-          <span className="text-xl">📝</span>
           <h3 className="text-lg font-semibold">Was this correct?</h3>
         </div>
 
