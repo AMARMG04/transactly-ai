@@ -10,6 +10,7 @@ import re
 # Keep these simple and readable (can later load from rules.yaml)
 RULES = {
     r"\b(irctc|airindia|indigo|goair|spicejet|uber|ola)\b": "Travel & Transport",
+    r"(sbi|hdfc|icici|atm|imps|neft|rtgs|upi|gpay|google\s*pay|phonepe|paytm)": "Financial Services",
     r"\b(indianoil|hpcl|hindustan petroleum|bharatpetrol|shell)\b": "Fuel",
     r"\b(zomato|swiggy|dominos|kfc|mcdonalds|starbucks)\b": "Food & Dining",
     r"\b(amazon|flipkart|myntra|ajio|meesho|reliance trends)\b": "Shopping",

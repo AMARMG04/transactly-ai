@@ -25,16 +25,91 @@ OUTPUT_PATH = "data/processed/transactions.csv"
 
 # Some example merchants per category (used to synthesize transactions)
 MERCHANT_TEMPLATES = {
-    "Food & Dining": ["Zomato", "Swiggy", "McDonalds", "Dominos", "KFC", "Starbucks"],
-    "Shopping": ["Amazon", "Flipkart", "Myntra", "Ajio", "Meesho"],
-    "Fuel": ["IndianOil", "HP Petrol", "BharatPetrol", "Shell"],
-    "Travel & Transport": ["Uber", "Ola", "IRCTC", "AirIndia", "IndiGo"],
-    "Utilities": ["Airtel Recharge", "BSNL Bill", "TNEB Payment", "Jio Fiber"],
-    "Health & Fitness": ["Apollo Pharmacy", "1mg", "Cult Fit", "MedPlus"],
-    "Entertainment": ["Netflix", "Hotstar", "Spotify", "BookMyShow"],
-    "Bills & Subscriptions": ["YouTube Premium", "Google One", "Apple Music", "Canva Pro"],
-    "Groceries": ["BigBasket", "Dunzo", "Reliance Fresh", "More Supermarket"],
-    "Others": ["Unknown", "Misc Payment", "Transfer"]
+    "Financial Services": [
+        # 1. Bank Transfers
+        "IMPS Transfer", "NEFT Transfer", "RTGS Transfer", "Bank A/C Transfer",
+        
+        # 2. UPI
+        "PhonePe UPI", "GooglePay UPI", "Paytm UPI", "BHIM UPI", "AmazonPay UPI",
+    
+        # 3. ATM
+        "ATM Withdrawal", "SBI ATM", "HDFC ATM", "ICICI ATM", "ATM Cash Removal",
+    
+        # 4. Card Payments
+        "Debit Card Payment", "Credit Card POS", "Card Swipe",
+    
+        # 5. Loan / EMI
+        "HDFC Loan EMI", "ICICI EMI Payment", "Bajaj Finance EMI", 
+    
+        # 6. Bank Charges
+        "Bank Service Charge", "ATM Fee", "SMS Charge", "Reversal Charge",
+    
+        # 7. Salary / Income
+        "Salary Credit", "Incentive Payment", "Company Reimbursement",
+    
+        # 8. Credit Card Bills
+        "HDFC Credit Card", "ICICI Credit Card", "SBI Card Payment",
+    ],
+    "Food & Dining": [
+        "Zomato", "Swiggy", "McDonalds", "Dominos", "KFC", "Starbucks",
+        "Kritunga", "Chai Point", "Barbeque Nation", "Faasos", "Behrouz Biryani",
+        "Wow Momo", "CCD Cafe", "Burger King", "Pizza Hut", "Subway",
+        "Chai Sutta Bar", "Haldirams", "Bikanervala", "Paradise Biryani",
+        "Brewberrys Cafe", "Thai Pavilion", "Cafe Coffee Day", "Chayos",
+    ],
+    "Shopping": [
+        "Amazon", "Flipkart", "Myntra", "Ajio", "Meesho",
+        "D Mart", "Croma", "Reliance Trends", "Nykaa", "Tanishq",
+        "FirstCry", "Decathlon", "Lifestyle", "Shoppers Stop", "Tata Cliq",
+        "Pantaloons", "Westside", "Zara India", "H&M India", "V Mart",
+    ],
+    "Fuel": [
+        "IndianOil", "HP Petrol", "BharatPetrol", "Shell",
+        "Reliance Petrol Pump", "Essar Petrol", "Nayara Energy",
+        "IOC Fuel Station", "BPCL Fuel Outlet", "HPCL Pump",
+    ],
+    "Travel & Transport": [
+        "Uber", "Ola", "IRCTC", "AirIndia", "IndiGo",
+        "Rapido", "RedBus", "AbhiBus", "MakeMyTrip", "Goibibo",
+        "Vistara Airlines", "Yatra Travels", "BlaBlaCar", "Orix Cabs",
+        "KSRTC Bus", "TNSTC Bus Service",
+    ],
+    "Utilities": [
+        "Airtel Recharge", "BSNL Bill", "TNEB Payment", "Jio Fiber",
+        "ACT Fibernet", "Vodafone Idea Recharge", "Hathway Broadband",
+        "Tata Play DTH", "Airtel Digital TV", "Municipal Water Tax",
+        "Adani Electricity", "Torrent Power", "BESCOM Electricity",
+    ],
+    "Health & Fitness": [
+        "Apollo Pharmacy", "1mg", "Cult Fit", "MedPlus",
+        "PharmEasy", "Healthspring", "Dr Lal PathLabs",
+        "Fortis Hospital", "Max Healthcare", "Columbia Asia",
+        "Viva Fitness Gym", "Gold’s Gym India", "Talwalkars Gym",
+    ],
+    "Entertainment": [
+        "Netflix", "Hotstar", "Spotify", "BookMyShow",
+        "PVR Cinemas", "INOX Movies", "Zee5 Subscription",
+        "Amazon Prime Video", "ALT Balaji", "Gaana Plus",
+        "PlayStation Store", "Xbox Live", "IRL Events India",
+    ],
+    "Bills & Subscriptions": [
+        "YouTube Premium", "Google One", "Apple Music", "Canva Pro",
+        "Notion Subscription", "Adobe Creative Cloud", "Microsoft 365",
+        "Figma Pro", "Coursera Plus", "Spotify Premium",
+        "ZEE5 Premium", "Disney Plus Hotstar", "Prime Membership",
+    ],
+    "Groceries": [
+        "BigBasket", "Dunzo", "Reliance Fresh", "More Supermarket",
+        "Blinkit", "Nature's Basket", "Spencer’s Retail",
+        "Heritage Fresh", "JioMart Grocery", "Easyday Club",
+        "DMart Ready", "Nilgiris Supermarket",
+    ],
+    "Others": [
+        "Unknown", "Misc Payment", "Transfer",
+        "UrbanClap", "Urban Company", "HouseJoy",
+        "NoBroker Services", "Local Technician", "Freelancer Payment",
+        "Donation Payment", "Society Maintenance", "Parking Charges",
+    ]
 }
 
 def generate_synthetic_data(n_per_cat=300):

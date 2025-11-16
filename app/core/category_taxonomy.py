@@ -17,6 +17,7 @@ CATEGORIES: List[str] = [
     "Entertainment",
     "Bills & Subscriptions",
     "Groceries",
+    "Financial Services",
     "Others"
 ]
 
