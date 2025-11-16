@@ -1,12 +1,26 @@
+# --- Core Backend ---
 fastapi
 uvicorn[standard]
-sentence-transformers
-scikit-learn
+pydantic
+python-dotenv
+
+# --- Data Handling ---
 pandas
 numpy
+scikit-learn
+joblib
 rapidfuzz
 unidecode
-joblib
+
+# --- CPU-only PyTorch (small, fast, works on Railway) ---
+torch==2.2.2+cpu
+torchaudio==2.2.2+cpu
+torchvision==0.17.2+cpu
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# --- Embeddings / NLP ---
+sentence-transformers==2.2.2
+
+# --- Utilities ---
 faker
-streamlit
 requests
