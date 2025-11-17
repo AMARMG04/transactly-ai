@@ -231,8 +231,8 @@ docker run -p 8000:8000 transactly
 
 | Name | Role |
 | :--- | :--- |
-| **Manoj MG** | AI Architecture • ML Pipeline • Backend (FastAPI) • Explainability |
-| **Mercy** | Next.js Frontend • UI/UX • Documentation • Demo Assets |
+| **Manoj M G** | AI Architecture • ML Pipeline • Backend (FastAPI) • Explainability |
+| **Mercy N** | Next.js Frontend • UI/UX • Documentation • Demo Assets |
 
 -----
 
