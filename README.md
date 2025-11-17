@@ -1,208 +1,167 @@
-# 💳 Transactly — Privacy-First Explainable AI for Smart Transaction Intelligence
+Transactly — Privacy-First Explainable AI for Smart Transaction Intelligence
 
-> **Built for GHCI 2025 Hackathon — Theme: Automated AI Transaction Categorisation**
+GHCI 2025 Hackathon — Theme: Automated AI Transaction Categorisation
 
-Transactly is a **fully offline, explainable AI engine** that automatically categorises financial transactions like
-`"AMZN Pmt #4827" → "Shopping"`
-using a hybrid of **rule-based precision** and **lightweight machine learning**.
+Transactly is a fully offline, explainable AI system that classifies financial transactions
+like:
 
-It is designed to be **privacy-first**, **interpretable**, and **deployable offline**, combining text-normalisation, embeddings, logistic regression, and explainability.
+"AMZN Pmt #4827" → "Shopping"
+"IRCTC Train Booking" → "Travel & Transport"
 
------
+It uses a hybrid rule-based + ML approach, lightweight embeddings, and
+transparent explanations — all without any external APIs or cloud-based inference.
 
-## 🌟 Key Features
+⸻
 
-  * 🧠 **Offline AI Engine** — No external APIs, runs fully local.
-  * 🪶 **Lightweight Embeddings** — Uses `all-MiniLM-L6-v2` (\~90 MB).
-  * ⚙️ **Hybrid Categorisation** — Rules + ML + Confidence logic.
-  * 🔍 **Explainability Layer** — Shows top-3 similar merchants.
-  * 🔁 **Feedback-Driven Learning** — User corrections retrain model.
-  * 🧩 **Modular Architecture** — Python + FastAPI + Streamlit.
-  * 🐳 **Docker-ready** — Single-command portable demo.
+Project Structure
 
------
+This README matches your current repository layout exactly:
 
-## 🏗️ Project Architecture
-
-```text
 transactly-ai/
 │
-├── app/                # FastAPI backend
-│   ├── main.py           # API entrypoint
-│   ├── routers/
-│   │   ├── classify.py   # /api/classify endpoint
-│   │   └── feedback.py   # /api/feedback endpoint
-│   └── core/
-│       ├── category_taxonomy.py
-│       ├── preprocessing.py
-│       ├── embeddings.py
-│       ├── classifier.py
-│       ├── rules.py
-│       └── decision.py
+├── transactly-backend/
+│   ├── app/
+│   │   ├── main.py
+│   │   ├── routers/
+│   │   │   ├── classify.py
+│   │   │   └── feedback.py
+│   │   └── core/
+│   │       ├── category_taxonomy.py
+│   │       ├── preprocessing.py
+│   │       ├── embeddings.py
+│   │       ├── classifier.py
+│   │       ├── rules.py
+│   │       └── decision.py
+│   ├── archived/
+│   ├── data/
+│   ├── scripts/
+│   ├── Dockerfile
+│   └── requirements.txt
 │
-├── scripts/
-│   ├── prepare_data.py   # Synthetic data generator
-│   └── retrain.py        # Active learning retrain loop
+├── transactly-frontend/    # Next.js frontend
 │
-├── data/
-│   ├── processed/        # CSVs, embeddings, etc.
-│   └── feedback.csv      # User corrections
-│
-├── ui/
-│   └── streamlit_app.py  # Streamlit demo dashboard
-│
-├── requirements.txt
-├── Dockerfile
 ├── .gitignore
 └── README.md
-```
 
------
+(📸 Add screenshot of folder structure)
 
-## ⚙️ Tech Stack
+⸻
 
-| Layer | Technology |
-|---|---|
-| **Language** | Python 3.11 |
-| **ML** | scikit-learn (LogisticRegression), Sentence-Transformers |
-| **API** | FastAPI |
-| **Frontend** | Streamlit |
-| **Storage** | CSV (local) |
-| **Explainability** | Cosine similarity of embeddings |
-| **Deployment** | Render (backend) + Streamlit Cloud (frontend) |
+Core Features
 
------
+Offline AI Engine
 
-## 🚀 Getting Started (Local Development)
+Runs 100% locally using:
+	•	MiniLM-L6-v2 embeddings (~90MB)
+	•	Logistic Regression classifier
+	•	Rule-based overrides for deterministic merchants
 
-### 1️⃣ Clone & setup environment
+Hybrid Categorisation System
+	1.	Rule-based detection
+	2.	ML-based prediction
+	3.	Confidence scoring
+	4.	Decision logic → final category
 
-```bash
+Explainability
+
+Each prediction includes:
+	•	method (rule / model)
+	•	similarity-based reasoning
+	•	top-K similar merchants with cosine scores
+
+Feedback Loop
+
+Users correct misclassified transactions → feedback saved → retraining improves accuracy.
+
+Modern Architecture
+	•	Backend: FastAPI
+	•	Frontend: Next.js
+	•	Storage: Local CSV
+	•	Deployment: Docker-ready
+
+⸻
+
+Architecture Overview
+
+(📸 Insert architecture diagram here — “AI Pipeline + Backend + Frontend Flow”)
+
+⸻
+
+Getting Started (Local Development)
+
+1. Clone & Setup
+
 git clone https://github.com/manojmg/transactly-ai.git
-cd transactly-ai
+cd transactly-ai/transactly-backend
 python -m venv .venv
-source .venv/bin/activate   # (Windows: .venv\Scripts\activate)
+source .venv/bin/activate
 pip install -r requirements.txt
-```
 
-### 2️⃣ Prepare data & train model
+2. Generate Synthetic Data & Train Model
 
-```bash
 python -m scripts.prepare_data
 python -m app.core.embeddings
 python -m app.core.classifier
-```
 
-### 3️⃣ Run FastAPI backend
+This produces:
 
-```bash
-uvicorn app.main:app --reload
-```
+data/processed/
+├── embeddings.npy
+├── processed.csv
+└── classifier.pkl
 
-→ Open [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+3. Run FastAPI Backend
 
-### 4️⃣ Run Streamlit UI
+uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 
-```bash
-streamlit run ui/streamlit_app.py
-```
+API docs:
 
-→ Open http://localhost:8501
+http://127.0.0.1:8000/docs
 
-### 🔁 Feedback & Retraining
+(📸 Add screenshot of FastAPI Swagger UI)
 
-Users can submit corrections through the Streamlit interface.
-Feedback is logged into `data/feedback.csv`.
+⸻
 
-To merge feedback and retrain:
+Frontend (Next.js)
 
-```bash
-python scripts/retrain.py
-```
+Inside transactly-frontend/:
 
-This regenerates embeddings and updates `app/models/classifier.pkl`.
+npm install
+npm run dev
 
-## 🌐 Deployment
+Frontend runs on:
 
-### 🧩 Backend (FastAPI on Render)
+http://localhost:3000
 
-1.  Push repo to GitHub.
-2.  Create a new **Render Web Service**.
-      * **Build command**: `pip install -r requirements.txt`
-      * **Start command**: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
-3.  Wait for deploy → you’ll get a public URL like
-    `https://transactly-backend.onrender.com`
+It communicates with FastAPI using environment variables:
 
-### 💻 Frontend (Streamlit Cloud)
+.env.local
 
-1.  Go to [https://share.streamlit.io](https://share.streamlit.io)
-2.  Choose this repo.
-3.  Set **Main file path**: `ui/streamlit_app.py`
-4.  Add an environment variable (TOML syntax):
-    `BACKEND_URL = "https://transactly-backend.onrender.com"`
-5.  Click **Deploy** → you’ll get
-    `https://transactly-ui.streamlit.app`
+NEXT_PUBLIC_BACKEND_URL=http://localhost:8000
 
-✅ Your app now runs end-to-end online and locally.
+(📸 Add screenshots of classification UI, feedback UI, explanation UI)
 
-### 🌐 Environment-Aware Configuration
+⸻
 
-`ui/streamlit_app.py` automatically switches environments:
+Feedback & Retraining
 
-```python
-import os
-BACKEND_URL = os.getenv("BACKEND_URL", "http://127.0.0.1:8000")
-API_URL = f"{BACKEND_URL}/api/classify/"
-FEEDBACK_URL = f"{BACKEND_URL}/api/feedback/"
-```
+Whenever a user corrects a category in the frontend:
+	•	feedback is appended to:
+transactly-backend/data/feedback.csv
 
-So it “just works”:
+To retrain with feedback:
 
-  * **Locally** → connects to `localhost:8000`
-  * **On Cloud** → connects to Render backend via env var
+python transactly-backend/scripts/retrain.py
 
-### 🐳 Docker (optional offline bundle)
+This regenerates:
+	•	embeddings
+	•	classifier
+	•	updated category mapping
 
-Build & run both backend + frontend together:
+⸻
 
-```bash
-docker build -t transactly .
-docker run -p 8000:8000 -p 8501:8501 transactly
-```
+🧠 Example API Output
 
-Then open:
-
-  * **FastAPI** → http://localhost:8000/docs
-  * **Streamlit** → http://localhost:8501
-
------
-
-## 🧠 Example Inference
-
-```text
-Input:   "IRCTC Train Booking #7845"
-Output:  Travel & Transport  (rule-based, 100%)
-
-Input:   "AMZN Pmt #8392"
-Output:  Shopping  (model-based, 91%)
-
-Input:   "Netflix Subscription"
-Output:  Entertainment  (rule-based, 100%)
-```
-
------
-
-## 🧩 Explainability Layer
-
-Each prediction includes:
-
-  * **Method**: `rule` or `model`
-  * **Confidence**: probability from classifier
-  * **Explanation**: matched rule or similar transactions
-
-Example JSON response:
-
-```json
 {
   "description": "Starbucks Order",
   "final_category": "Food & Dining",
@@ -214,21 +173,67 @@ Example JSON response:
     ["McDonalds", 0.89]
   ]
 }
-```
 
------
+(📸 Add screenshot of raw API JSON in Swagger)
 
-## 🧾 Notes
+⸻
 
-  * Render Free Tier may “sleep” after 15 min inactivity (cold start delay ≈ 10 s).
-  * All AI runs locally – no external API calls or internet inference.
-  * Feedback is stored locally (`feedback.csv`), retrainable anytime.
+🐳 Docker (Optional)
 
------
+From root:
 
-## 🧩 Contributors
+cd transactly-backend
+docker build -t transactly .
+docker run -p 8000:8000 transactly
 
-| Name | Role |
-|---|---|
-| Manoj MG | Core AI Architecture • Backend (FastAPI) • Model & Explainability |
-| Mercy | UI & Streamlit Design • Documentation • Pitch Slides & Demo Video |
+
+⸻
+
+🔐 Privacy & Design Principles
+	•	No internet calls
+	•	No external AI APIs
+	•	Local classification only
+	•	Fully explainable decisions
+	•	Deterministic fallbacks ensure trustworthiness
+
+(📸 Insert “Privacy First” diagram)
+
+⸻
+
+Tech Stack
+
+Backend
+	•	Python 3.11
+	•	FastAPI
+	•	scikit-learn
+	•	Sentence Transformers (MiniLM)
+
+Frontend
+	•	Next.js 14
+	•	Tailwind CSS
+	•	Axios
+
+Storage
+	•	Local CSV-based storage
+	•	No cloud database required
+
+⸻
+
+Contributors
+
+Name	Role
+Manoj MG	AI Architecture • ML Pipeline • Backend (FastAPI) • Explainability
+Mercy	Next.js Frontend • UI/UX • Documentation • Demo Assets
+
+
+⸻
+
+Summary
+
+Transactly demonstrates a production-grade offline AI engine with:
+	•	state-of-the-art embeddings
+	•	interpretable logic
+	•	retrainable ML
+	•	clean modern web UI
+	•	privacy-first design
+
