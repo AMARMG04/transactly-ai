@@ -1,4 +1,4 @@
-# Transactly — Privacy-First Explainable AI for Smart Transaction Intelligence
+# Transactly — Privacy-First AI for Smart Transaction Categorization
 
 **GHCI 2025 Hackathon — Theme: Automated AI Transaction Categorisation**
 
@@ -44,13 +44,11 @@ transactly-ai/
 └── README.md
 ````
 
-*(Replace with actual screenshot path)*
-
 -----
 
-## 🚀 Core Features
+## Core Features
 
-### 🧠 Offline AI Engine
+### Offline AI Engine
 
 Runs **100% locally** using:
 
@@ -58,14 +56,14 @@ Runs **100% locally** using:
   * Logistic Regression classifier
   * Rule-based overrides for deterministic merchants
 
-### ⚖️ Hybrid Categorisation System
+### Hybrid Categorisation System
 
 1.  Rule-based detection
 2.  ML-based prediction
 3.  Confidence scoring
 4.  Decision logic → **Final Category**
 
-### 🔍 Explainability
+### Explainability
 
 Each prediction includes:
 
@@ -73,11 +71,11 @@ Each prediction includes:
   * **Similarity-based reasoning**
   * **Top-K similar merchants** with cosine scores
 
-### 🔄 Feedback Loop
+### Feedback Loop
 
 Users correct misclassified transactions → feedback is saved → retraining improves accuracy.
 
-### 🏗️ Modern Architecture
+### Modern Architecture
 
   * **Backend:** FastAPI
   * **Frontend:** Next.js
@@ -86,8 +84,9 @@ Users correct misclassified transactions → feedback is saved → retraining im
 
 -----
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
+![System Architecture](./assets/Architecture.png)
 -----
 
 ## ⚡ Getting Started (Local Development)
@@ -126,17 +125,17 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 
 -----
 
-## 💻 Frontend (Next.js)
+## Frontend (Next.js)
 
 Navigate to the frontend directory:
 
 ```bash
 cd transactly-frontend/
-npm install
-npm run dev
+bun install
+bun run dev
 ```
 
-**Frontend runs on:** [http://localhost:3000](https://www.google.com/search?q=http://localhost:3000)
+**Frontend runs on:** [http://localhost:3000]
 
 It communicates with FastAPI using environment variables defined in `.env.local`:
 
@@ -146,7 +145,7 @@ NEXT_PUBLIC_BACKEND_URL=http://localhost:8000
 
 -----
 
-## 🔄 Feedback & Retraining
+## Feedback & Retraining
 
 Whenever a user corrects a category in the frontend:
 
@@ -166,7 +165,7 @@ python transactly-backend/scripts/retrain.py
 
 -----
 
-## 🧠 Example API Output
+## Example API Output
 
 ```json
 {
@@ -184,7 +183,7 @@ python transactly-backend/scripts/retrain.py
 
 -----
 
-## 🐳 Docker (Optional)
+## Docker (Optional)
 
 From the root directory:
 
@@ -196,7 +195,7 @@ docker run -p 8000:8000 transactly
 
 -----
 
-## 🔐 Privacy & Design Principles
+## Privacy & Design Principles
 
   * **No internet calls:** Data never leaves the machine.
   * **No external AI APIs:** No dependency on OpenAI or Gemini.
@@ -206,7 +205,7 @@ docker run -p 8000:8000 transactly
 
 -----
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Component | Technology |
 | :--- | :--- |
@@ -216,7 +215,7 @@ docker run -p 8000:8000 transactly
 
 -----
 
-## 👥 Contributors
+## Contributors
 
 | Name | Role |
 | :--- | :--- |
@@ -225,7 +224,7 @@ docker run -p 8000:8000 transactly
 
 -----
 
-## 📝 Summary
+## Summary
 
 Transactly demonstrates a production-grade offline AI engine with:
 
