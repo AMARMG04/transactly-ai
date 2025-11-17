@@ -1,0 +1,301 @@
+transaction_id,description,amount,category
+1,"Amazon Order #12345",78.50,Shopping
+2,"Swiggy Food Delivery",25.00,Food & Dining
+3,"IRCTC Train Ticket",1200.00,Travel & Transport
+4,"Reliance Fresh Groceries",450.75,Groceries
+5,"Netflix Subscription",14.99,Bills & Subscriptions
+6,"Shell Fuel",65.20,Fuel
+7,"Apollo Pharmacy",180.00,Health & Fitness
+8,"PVR Cinemas Ticket",200.00,Entertainment
+9,"Tata Power Bill",1500.00,Utilities
+10,"Myntra Online Shopping",320.50,Shopping
+11,"Zomato Food Order",30.00,Food & Dining
+12,"MakeMyTrip Hotel Booking",2800.00,Travel & Transport
+13,"Big Bazaar Groceries",580.25,Groceries
+14,"Spotify Premium",10.99,Bills & Subscriptions
+15,"Indian Oil Fuel",50.00,Fuel
+16,"Practo Doctor Consultation",600.00,Health & Fitness
+17,"BookMyShow Tickets",150.00,Entertainment
+18,"BSES Rajdhani Electricity",900.00,Utilities
+19,"Flipkart Order #67890",95.75,Shopping
+20,"Domino's Pizza Delivery",18.50,Food & Dining
+21,"Uber Ride",45.00,Travel & Transport
+22,"DMart Groceries",350.00,Groceries
+23,"Hotstar Subscription",79.99,Bills & Subscriptions
+24,"HPCL Fuel",40.00,Fuel
+25,"Fitness First Membership",2500.00,Health & Fitness
+26,"Saregama Music Concert",300.00,Entertainment
+27,"Tata Sky Bill",550.00,Utilities
+28,"Ajio Online Shopping",220.00,Shopping
+29,"Starbucks Coffee",12.00,Food & Dining
+30,"Goibibo Bus Ticket",800.00,Travel & Transport
+31,"Aadhar Fresh Groceries",400.50,Groceries
+32,"Gaana Music Premium",9.99,Bills & Subscriptions
+33,"IOCL Fuel",35.50,Fuel
+34,"Cult.fit Fitness Subscription",1200.00,Health & Fitness
+35,"Panchayat Entertainment App",50.00,Entertainment
+36,"Adani Power Bill",1100.00,Utilities
+37,"Nykaa Beauty Products",600.00,Shopping
+38,"KFC Delivery",20.00,Food & Dining
+39,"Ola Ride",38.00,Travel & Transport
+40,"Spencer's Supermarket",380.00,Groceries
+41,"Jio Cinema Subscription",29.99,Bills & Subscriptions
+42,"Essar Fuel",58.00,Fuel
+43,"MedPlus Pharmacy",250.00,Health & Fitness
+44,"YouTube Premium",12.99,Entertainment
+45,"BSNL Broadband Bill",750.00,Utilities
+46,"Pepperfry Furniture",1800.00,Shopping
+47,"Foodpanda Delivery",28.00,Food & Dining
+48,"MakeTravels Flight Ticket",3500.00,Travel & Transport
+49,"Reliance Smart Point Groceries",425.00,Groceries
+50,"Gaana Music Subscription",9.99,Bills & Subscriptions
+51,"BP Fuel",42.00,Fuel
+52,"Fitbit Premium",14.99,Health & Fitness
+53,"Zee5 Subscription",39.99,Entertainment
+54,"Tata Play Bill",620.00,Utilities
+55,"Central Online Shopping",250.00,Shopping
+56,"Dominos Food Delivery",19.50,Food & Dining
+57,"Yatra Flight Ticket",4000.00,Travel & Transport
+58,"Namdev Fresh Groceries",380.50,Groceries
+59,"Wynk Music Premium",8.99,Bills & Subscriptions
+60,"IndianOil Fuel",48.50,Fuel
+61,"Apollo Health & Wellness",220.00,Health & Fitness
+62,"Amazon Prime Video",12.99,Entertainment
+63,"Gujarat Gas Bill",1300.00,Utilities
+64,"Shoppers Stop",400.75,Shopping
+65,"Swiggy Instamart",15.00,Food & Dining
+66,"Paytm Travel Booking",1000.00,Travel & Transport
+67,"More Supermarket Groceries",550.00,Groceries
+68,"LinkedIn Premium",29.99,Bills & Subscriptions
+69,"HP Fuel",55.00,Fuel
+70,"Manipal Hospitals Consultation",700.00,Health & Fitness
+71,"Hotstar VIP",99.99,Entertainment
+72,"Mahindra Power Bill",1050.00,Utilities
+73,"MyGlamm Beauty",350.00,Shopping
+74,"Pizza Hut Delivery",16.00,Food & Dining
+75,"EaseMyTrip Flight",2800.00,Travel & Transport
+76,"Subhiksha Groceries",320.75,Groceries
+77,"Apple Music Subscription",9.99,Bills & Subscriptions
+78,"Indian Oil Servo Fuel",47.50,Fuel
+79,"Healthspring Supplements",150.00,Health & Fitness
+80,"Hoichoi Subscription",49.99,Entertainment
+81,"Tata Housing Bill",800.00,Utilities
+82,"Snapdeal Shopping",110.50,Shopping
+83,"Swiggy Grocery",18.00,Food & Dining
+84,"Cleartrip Travel",950.00,Travel & Transport
+85,"BigBasket Groceries",480.00,Groceries
+86,"Spotify Subscription",11.99,Bills & Subscriptions
+87,"IOCL Petrol",45.00,Fuel
+88,"VLCC Wellness Products",200.00,Health & Fitness
+89,"MX Player Subscription",5.99,Entertainment
+90,"BSES Rajdhani Bill",1150.00,Utilities
+91,"Lifestyle Shopping",280.25,Shopping
+92,"Zomato Order",22.50,Food & Dining
+93,"MakeMyTrip Hotel",2500.00,Travel & Transport
+94,"Aadhar Supermarket Groceries",450.00,Groceries
+95,"Jio Recharge",200.00,Bills & Subscriptions
+96,"Essar Petrol",60.00,Fuel
+97,"Cadila Healthcare Consultation",550.00,Health & Fitness
+98,"Disney+ Hotstar",15.99,Entertainment
+99,"Adani Electricity Bill",1200.00,Utilities
+100,"Ajio Shopping",200.50,Shopping
+101,"McDonald's Delivery",10.00,Food & Dining
+102,"GoAir Flight Ticket",1800.00,Travel & Transport
+103,"D-Mart Groceries",380.50,Groceries
+104,"Zee5 Music Subscription",49.99,Bills & Subscriptions
+105,"HPCL Petrol",38.00,Fuel
+106,"Fit & Fab Gym",1000.00,Health & Fitness
+107,"Mubi Subscription",11.99,Entertainment
+108,"Gujarat Gas Bill",1000.00,Utilities
+109,"Central Shopping",230.00,Shopping
+110,"Zomato Order",25.50,Food & Dining
+111,"Yatra Travels Booking",1200.00,Travel & Transport
+112,"Subhiksha Supermarket",420.75,Groceries
+113,"Wynk Music Premium",7.99,Bills & Subscriptions
+114,"IOCL Fuel",41.00,Fuel
+115,"Apollo Pharmacy",200.50,Health & Fitness
+116,"Prime Video",13.99,Entertainment
+117,"BSES Bill",1050.00,Utilities
+118,"Flipkart Online Shopping",85.75,Shopping
+119,"Swiggy Instamart",13.50,Food & Dining
+120,"Paytm Travel",800.00,Travel & Transport
+121,"Bigbasket Groceries",450.00,Groceries
+122,"Netflix Subscription",12.99,Bills & Subscriptions
+123,"Indian Oil Xtra Fuel",46.50,Fuel
+124,"Health Club Membership",1500.00,Health & Fitness
+125,"Youtube Premium",12.99,Entertainment
+126,"Gujarat Gas Bill",950.00,Utilities
+127,"Lifestyle Online Shopping",220.00,Shopping
+128,"Domino's Pizza Delivery",17.50,Food & Dining
+129,"Goibibo Bus Ticket",700.00,Travel & Transport
+130,"DMart Groceries",350.00,Groceries
+131,"Hotstar VIP",59.99,Bills & Subscriptions
+132,"Shell Fuel",52.00,Fuel
+133,"Cult.fit Fitness",1000.00,Health & Fitness
+134,"BookMyShow Tickets",120.00,Entertainment
+135,"Tata Sky Bill",500.00,Utilities
+136,"Nykaa Cosmetics",500.00,Shopping
+137,"Foodpanda Delivery",24.00,Food & Dining
+138,"EaseMyTrip Flight",2200.00,Travel & Transport
+139,"Namdev Fresh Groceries",350.50,Groceries
+140,"Wynk Music",6.99,Bills & Subscriptions
+141,"Essar Petrol",56.50,Fuel
+142,"MedPlus Pharmacy",240.00,Health & Fitness
+143,"Amazon Prime Video",13.99,Entertainment
+144,"Mahindra Power Bill",1100.00,Utilities
+145,"MyGlamm Beauty Products",320.00,Shopping
+146,"Pizza Hut Order",15.00,Food & Dining
+147,"Cleartrip Travel Booking",900.00,Travel & Transport
+148,"Aadhar Supermarket Groceries",400.00,Groceries
+149,"Jio Recharge Plan",180.00,Bills & Subscriptions
+150,"Essar Petrol",58.00,Fuel
+151,"Cadila Healthcare Consultation",500.00,Health & Fitness
+152,"Disney+ Hotstar",14.99,Entertainment
+153,"Adani Electricity Bill",1150.00,Utilities
+154,"Ajio Online Shopping",180.50,Shopping
+155,"McDonald's Order",8.00,Food & Dining
+156,"GoAir Flight Booking",1600.00,Travel & Transport
+157,"D-Mart Groceries",360.50,Groceries
+158,"Zee5 Subscription",39.99,Bills & Subscriptions
+159,"HPCL Petrol",36.00,Fuel
+160,"Fit & Fab Gym Membership",900.00,Health & Fitness
+161,"Mubi Premium Subscription",11.99,Entertainment
+162,"Gujarat Gas Bill",900.00,Utilities
+163,"Central Shopping Online",200.00,Shopping
+164,"Zomato Order",24.50,Food & Dining
+165,"Yatra Travels Flight Ticket",1000.00,Travel & Transport
+166,"Subhiksha Supermarket Groceries",390.75,Groceries
+167,"Wynk Music Premium",6.99,Bills & Subscriptions
+168,"Indian Oil XtraFuel",43.00,Fuel
+169,"Apollo Pharmacy Products",180.50,Health & Fitness
+170,"Prime Video Channel Subscription",12.99,Entertainment
+171,"BSES Rajdhani Bill",1000.00,Utilities
+172,"Flipkart Fashion",75.75,Shopping
+173,"Swiggy Grocery Delivery",16.50,Food & Dining
+174,"Paytm Flight Booking",700.00,Travel & Transport
+175,"Bigbasket Online Groceries",420.00,Groceries
+176,"Netflix India",14.99,Bills & Subscriptions
+177,"Indian Oil Servo Fuel",45.50,Fuel
+178,"Healthspring Supplements",120.00,Health & Fitness
+179,"MX Player Subscription",5.99,Entertainment
+180,"BSNL Broadband Bill",700.00,Utilities
+181,"Lifestyle App Shopping",200.25,Shopping
+182,"Zomato Order",20.50,Food & Dining
+183,"MakeMyTrip Hotels",2200.00,Travel & Transport
+184,"Aadhar Fresh Groceries",380.00,Groceries
+185,"Jio Data Plan",150.00,Bills & Subscriptions
+186,"Essar Petrol",59.50,Fuel
+187,"Cadila Doctor Consultation",450.00,Health & Fitness
+188,"DisneyPlus Hotstar",15.99,Entertainment
+189,"Mahindra Electricity Bill",1050.00,Utilities
+190,"Nykaa Online Shopping",450.00,Shopping
+191,"Foodpanda Order",23.00,Food & Dining
+192,"EaseMyTrip Travel Booking",950.00,Travel & Transport
+193,"Namdev Supermarket Groceries",350.50,Groceries
+194,"Wynk Music Premium",7.99,Bills & Subscriptions
+195,"Essar Petrol",55.50,Fuel
+196,"MedPlus Health Products",200.00,Health & Fitness
+197,"Amazon Prime",13.99,Entertainment
+198,"Mahindra Power Bill",900.00,Utilities
+199,"MyGlamm Shopping",300.00,Shopping
+200,"Pizza Hut Order",14.00,Food & Dining
+201,"IMPS Transfer to HDFC Bank Account",1500.00,Financial Services
+202,"NEFT Transfer to SBI Savings Account",2200.50,Financial Services
+203,"PhonePe UPI Payment to Grocery Store",340.75,Financial Services
+204,"Google Pay UPI Transfer to Friend",500.00,Financial Services
+205,"Paytm UPI Payment at Petrol Pump",850.25,Financial Services
+206,"BHIM UPI Payment to Electrician",600.00,Financial Services
+207,"Amazon Pay UPI Grocery Purchase",450.20,Financial Services
+208,"Bank A/C Transfer to ICICI Account",1200.00,Financial Services
+209,"RTGS Transfer to Business Account",50000.00,Financial Services
+210,"Salary Credit from Employer",45000.00,Financial Services
+211,"Monthly Salary Credited",52000.00,Financial Services
+212,"Incentive Payment from Company",8000.00,Financial Services
+213,"Reimbursement Credit from HR",2300.00,Financial Services
+214,"SBI ATM Cash Withdrawal",2000.00,Financial Services
+215,"HDFC ATM Cash Withdrawal",3000.00,Financial Services
+216,"ICICI ATM Cash Withdrawal",1500.00,Financial Services
+217,"ATM Service Charge Debit",25.00,Financial Services
+218,"Bank SMS Alert Charge",15.00,Financial Services
+219,"ATM Decline Fee",30.00,Financial Services
+220,"Bank Service Charge for Account Maintenance",100.00,Financial Services
+221,"Loan EMI Payment - HDFC Home Loan",18500.00,Financial Services
+222,"ICICI Personal Loan EMI",9500.00,Financial Services
+223,"Bajaj Finance EMI Payment",3200.00,Financial Services
+224,"Axis Bank Auto Loan EMI",10500.00,Financial Services
+225,"SBI Loan EMI Debit",7400.00,Financial Services
+226,"HDFC Credit Card Bill Payment",12000.00,Financial Services
+227,"ICICI Credit Card Bill Payment",8500.50,Financial Services
+228,"SBI Card Payment - Minimum Due",2500.00,Financial Services
+229,"HDFC Credit Card Auto Debit",9500.00,Financial Services
+230,"Reversal of Credit Card Charges",-300.00,Financial Services
+231,"POS Debit Card Transaction - Lifestyle Store",2300.75,Financial Services
+232,"POS Card Payment - Reliance Trends",1750.50,Financial Services
+233,"Debit Card Swipe at Medical Store",620.00,Financial Services
+234,"Credit Card Swipe at Electronics Store",12499.00,Financial Services
+235,"UPI Payment to Mobile Recharge",199.00,Financial Services
+236,"UPI Transfer to Landlord Rent",12000.00,Financial Services
+237,"UPI Transfer to Tuition Teacher",2000.00,Financial Services
+238,"UPI Transfer for Fuel Payment",600.50,Financial Services
+239,"NEFT Transfer to LIC Premium",3500.00,Financial Services
+240,"IMPS Transfer to Friend’s Account",750.00,Financial Services
+241,"Refund from Amazon via UPI",450.00,Financial Services
+242,"Refund from Swiggy UPI",200.00,Financial Services
+243,"Refund of Failed UPI Transaction",300.00,Financial Services
+244,"Reversal of ATM Failed Cash Withdrawal",2000.00,Financial Services
+245,"SBI Internet Banking Transfer",5000.00,Financial Services
+246,"HDFC NetBanking Payment",1250.25,Financial Services
+247,"ICICI NetBanking Transaction",2300.00,Financial Services
+248,"Bank Interest Credit",150.00,Financial Services
+249,"TDS Deduction on Interest",75.00,Financial Services
+250,"IMPS Charge Debit",5.00,Financial Services
+251,"UPI AutoPay Mandate Debit",450.00,Financial Services
+252,"UPI AutoPay Subscription Renewal",199.00,Financial Services
+253,"UPI Transfer for Apartment Maintenance",2500.00,Financial Services
+254,"UPI Payment at Restaurant",950.00,Financial Services
+255,"UPI Payment at Clothing Store",1200.00,Financial Services
+256,"NEFT Transfer to Vendor",7800.00,Financial Services
+257,"Salary Advance Credit",5000.00,Financial Services
+258,"Late Fee for Loan Payment",350.00,Financial Services
+259,"Penalty Charge - Credit Card",500.00,Financial Services
+260,"Bank Fee for Cheque Bounce",250.00,Financial Services
+261,"UPI Payment to Delivery Agent",150.00,Financial Services
+262,"UPI Payment to Auto Driver",90.00,Financial Services
+263,"UPI Transfer to Cousin",700.00,Financial Services
+264,"SBI Cheque Deposit",0.00,Financial Services
+265,"HDFC Cheque Clearing",0.00,Financial Services
+266,"ICICI Demand Draft Charge",150.00,Financial Services
+267,"Loan Foreclosure Payment",20000.00,Financial Services
+268,"House Rent Paid via Bank Transfer",15000.00,Financial Services
+269,"School Fee Paid via NetBanking",20000.00,Financial Services
+270,"UPI Transfer for Hospital Payment",4500.00,Financial Services
+271,"UPI Merchant Payment - Kirana Shop",550.00,Financial Services
+272,"UPI Payment for Medicines",620.00,Financial Services
+273,"RTGS Transfer for Property Purchase",1500000.00,Financial Services
+274,"Foreign Remittance Received",45000.00,Financial Services
+275,"International Debit Card Fee",450.00,Financial Services
+276,"ATM Cash Withdrawal at Foreign Location",10000.00,Financial Services
+277,"Bank Forex Markup Fee",300.00,Financial Services
+278,"SBI YONO App Transfer",7000.00,Financial Services
+279,"ICICI iMobile App Transfer",5200.00,Financial Services
+280,"Axis Mobile App UPI Payment",950.00,Financial Services
+281,"Reversal of ATM Service Charge",25.00,Financial Services
+282,"Refund from Uber via UPI",150.00,Financial Services
+283,"UPI Payment to Dentist",850.00,Financial Services
+284,"UPI Transfer to Car Mechanic",1400.00,Financial Services
+285,"Loan Top-Up Credit",30000.00,Financial Services
+286,"Credit Card Cashback Credit",500.00,Financial Services
+287,"Debit Card Cashback",120.00,Financial Services
+288,"Interest Subsidy Credit",340.00,Financial Services
+289,"UPI Transfer to Milk Vendor",350.00,Financial Services
+290,"UPI Transfer to Newspaper Guy",250.00,Financial Services
+291,"UPI Merchant Payment - Hardware Store",780.00,Financial Services
+292,"UPI Merchant Payment - Chicken Shop",420.00,Financial Services
+293,"UPI Payment for Mobile Bill",399.00,Financial Services
+294,"Bank Fee Reversal",100.00,Financial Services
+295,"GST Debit on Banking Services",40.00,Financial Services
+296,"Refund for Failed Card Transaction",600.00,Financial Services
+297,"Card Decline Charge",50.00,Financial Services
+298,"UPI Transfer to Maid Salary",2000.00,Financial Services
+299,"UPI Transfer to Cook",1800.00,Financial Services
+300,"UPI Payment to Water Supplier",500.00,Financial Services
