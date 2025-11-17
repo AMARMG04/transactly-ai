@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # 3. Copy backend code only
-COPY transactly-backend/ /app/
+COPY . /app/
 
 # 4. Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
