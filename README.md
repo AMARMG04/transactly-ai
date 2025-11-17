@@ -12,7 +12,7 @@ It uses a hybrid rule-based + ML approach, lightweight embeddings, and transpare
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 This matches the current repository layout exactly:
 
@@ -89,7 +89,7 @@ Users correct misclassified transactions → feedback is saved → retraining im
 ![System Architecture](./assets/Architecture.png)
 -----
 
-## ⚡ Getting Started (Local Development)
+## Getting Started (Local Development)
 
 ### 1\. Clone & Setup
 
@@ -123,6 +123,8 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 
 **API Docs:** Open [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) to see the Swagger UI.
 
+![System Architecture](./assets/Swagger_UI.png)
+
 -----
 
 ## Frontend (Next.js)
@@ -142,6 +144,16 @@ It communicates with FastAPI using environment variables defined in `.env.local`
 ```env
 NEXT_PUBLIC_BACKEND_URL=http://localhost:8000
 ```
+
+![System Architecture](./assets/UI.png)
+
+![System Architecture](./assets/Example_1.png)
+
+![System Architecture](./assets/Result_1.png)
+
+![System Architecture](./assets/Example_2.png)
+
+![System Architecture](./assets/Result_2.png)
 
 -----
 

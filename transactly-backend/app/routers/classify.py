@@ -11,11 +11,12 @@ import os
 
 router = APIRouter()
 
-# Load precomputed embeddings/texts for explainability
+# Load embeddings/texts once for explainability
 EMB_PATH = "data/processed/embeddings.npy"
 TEXT_PATH = "data/processed/texts.npy"
 embeddings_db = np.load(EMB_PATH) if os.path.exists(EMB_PATH) else None
 texts_db = np.load(TEXT_PATH, allow_pickle=True) if os.path.exists(TEXT_PATH) else None
+
 
 class TransactionInput(BaseModel):
     text: str
@@ -28,41 +29,26 @@ def classify_transaction(input: TransactionInput):
     """
     result = decide_category(input.text, embeddings_db, texts_db)
 
-    explanation = result.get("explanation", [])
-    scores = result.get("scores", {})
+    # Clean explanation format: [(token, importance)] → list of dicts
     cleaned_explanation = []
-    
-    raw_explanation = result.get("explanation", [])
-    
-    for item in raw_explanation:
-        if isinstance(item, (list, tuple)) and len(item) == 2:
-            # correct format → (token, score)
-            token, score = item
-            cleaned_explanation.append({
-                "token": str(token),
-                "importance": float(score)
-            })
-        else:
-            # fallback → treat single token with neutral importance
-            cleaned_explanation.append({
-                "token": str(item),
-                "importance": 0.1   # default small highlight
-            })
-    # Fallback scores if missing
-    if not scores:
-        scores = {
-            result["final_category"]: result["confidence"],
-            "Other": 1 - result["confidence"]
-        }
+    for token, score in result.get("explanation", []):
+        cleaned_explanation.append({
+            "token": str(token),
+            "importance": float(score)
+        })
+
+    # Category scores (optional, but useful and clean)
+    result_scores = result.get("scores")
+    category_scores = None
+    if result_scores:
+        category_scores = {cat: float(prob) for cat, prob in result_scores.items()}
 
     return {
         "category": result["final_category"],
-        "confidence": round(result["confidence"], 3),
+        "confidence": round(float(result["confidence"]), 3),
         "original_text": input.text,
         "explanation": cleaned_explanation,
-        "category_scores": {
-            cat: float(prob) for cat, prob in scores.items()
-        },
+        "category_scores": category_scores,
         "similar_examples": result.get("similar_examples", []),
         "method": result["method"]
     }

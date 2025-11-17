@@ -114,10 +114,10 @@ export default function ResultCard({ result, loading }: { result: Classification
         </div>
       </section>
 
-      {/* <hr className="border border-gray-100" /> */}
+      <hr className="border border-gray-100" />
 
       {/* Explanation */}
-      {/* <section>
+      <section>
         <div className="flex items-center gap-2 mb-1">
           <span className="text-xl">🔍</span>
           <h3 className="text-lg font-semibold">Why</h3>
@@ -128,9 +128,9 @@ export default function ResultCard({ result, loading }: { result: Classification
         </p>
 
         <ExplainTokens text={result.original_text} explanation={result.explanation} />
-      </section> */}
+      </section>
 
-      {/* <hr className="border border-gray-100" /> */}
+      <hr className="border border-gray-100" />
 
       {/* Feedback */}
       <section>
